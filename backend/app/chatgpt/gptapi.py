@@ -1,7 +1,7 @@
 import openai
 
-from src.domain.question import question_schema
-from src.chatgpt import prompt
+from app.domain.question import question_schema
+from app.chatgpt import prompt
 
 
 def get_answer(_question: question_schema.QuestionCreate):

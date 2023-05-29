@@ -1,14 +1,14 @@
 from sqlalchemy import Column, Integer, String, Text, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 
-from database import Base
+from app.database.conn import Base
 
 
 class Question(Base):
     __tablename__ = "question"
 
     id = Column(Integer, primary_key=True)
-    mbti = Column(String, nullable=False)
+    mbti = Column(String(4), nullable=False)
     content = Column(Text, nullable=False)
     create_date = Column(DateTime, nullable=False)
 
