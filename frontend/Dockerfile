@@ -4,7 +4,6 @@ WORKDIR /
 
 COPY . .
 
-RUN npm init
 RUN npm install
 RUN npm run build
 
