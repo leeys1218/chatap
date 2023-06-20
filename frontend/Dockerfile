@@ -6,7 +6,7 @@ COPY . .
 
 RUN cd frontend && ls
 RUN cd frontend && npm install --silent
-RUN npm run build
+RUN cd frontend && npm run build
 
 CMD ["npm", "run", "dev"]
 
