@@ -1,6 +1,8 @@
 FROM node:16.17.0
 
 WORKDIR /frontend
+
+COPY package*.json ./
 COPY . .
 
 
