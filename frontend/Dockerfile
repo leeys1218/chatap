@@ -4,6 +4,7 @@ WORKDIR ./frontend
 
 COPY . .
 
+RUN cd frontend
 RUN ls
 RUN npm install --silent
 RUN npm run build
