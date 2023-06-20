@@ -1,6 +1,5 @@
-FROM node:16.17.0
+FROM node:14
 
-WORKDIR /frontend
 COPY ./ ./
 
 
