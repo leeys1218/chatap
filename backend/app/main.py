@@ -1,6 +1,4 @@
 from dataclasses import asdict
-
-import uvicorn
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
@@ -28,6 +26,7 @@ def create_app():
     # middleware def
     origins = [
         "http://localhost:5173",
+        "0.0.0.0:5173",
     ]
     app.add_middleware(
         CORSMiddleware,
