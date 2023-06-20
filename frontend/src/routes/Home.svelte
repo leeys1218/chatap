@@ -156,7 +156,7 @@
   }
   
   body {
-    background-image: url('images/background.jpg');
+    background-image: url('./images/background.jpg');
     background-size: cover;
     height: 100vh;
     color: white;
