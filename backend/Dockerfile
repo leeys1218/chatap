@@ -5,6 +5,7 @@ WORKDIR /app
 
 COPY . .
 
+RUN pip freeze > requirements.txt
 RUN pip install -r requirements.txt
 
 ENV API_ENV "prod"
