@@ -1,7 +1,6 @@
 FROM node:16.17.0
 
-WORKDIR /app
-COPY ./ /app
+COPY . .
 
 RUN npm install
 RUN npm run build
