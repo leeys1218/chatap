@@ -13,15 +13,18 @@ const fastapi = (operation, url, params, success_callback, failure_callback) => 
         method: method,
         headers: {
             "Content-Type": content_type
-        }
+        },
+        credentials: 'include',
     }
 
     if (method !== 'get') {
         options['body'] = body
     }
-
+    console.log(_url)
+    console.log(options)
     fetch(_url, options)
         .then(response => {
+            console.log("hi")
             if(response.status === 204) {  // No content
                 if(success_callback) {
                     success_callback()

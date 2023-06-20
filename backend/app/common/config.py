@@ -25,7 +25,11 @@ class LocalConfig(Config):
 @dataclass
 class ProdConfig(Config):
     PROJ_RELOAD: bool = False
-    DB_URL: str = "mysql+pymysql://chataprds.cz0kxq7yhsfp.ap-northeast-2.rds.amazonaws.com:3306/chatap"
+    user = "fastapi"
+    pwd = "fastapi123"
+    host = "chataprds.cz0kxq7yhsfp.ap-northeast-2.rds.amazonaws.com"
+    port = "3306"
+    DB_URL: str = f'mysql+pymysql://{user}:{pwd}@{host}:{port}/chatpapdb'
 
 
 def conf():

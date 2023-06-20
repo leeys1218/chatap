@@ -1,5 +1,7 @@
 /.idea
 /venv
+/backend/.idea
+/backend/__pycache__
 act.cmd
 chatapkey.pem
 deact.cmd

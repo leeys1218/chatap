@@ -4,20 +4,21 @@ OPENAI_API_KEY = "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"
 
 messages = [
     {"role": "system", "content": "넌 융 학파의 심리분석가야 많은 자료를 인용할 줄 알아"},
-    {"role": "user", "content": "내 질문을 보고 내 심리 상태의 문제점을 찾아줘.\n"
-                                "다음과 같은 항목을 고려해서 말해줘\n" +
-                                "- 말해주는 MBTI를 연관지어서 작성 \n" +
-                                "- 정신 심리 분석 분야의 유명한 사람의 말을 인용할 것\n"
-                                "- 짥게 3줄 정도 핵심이 잘 드러나게 \n"
-                                "- 질문을 잘 기억해줘"}
+    {"role": "user", "content": "너는 융 학파를 위주로 공부한 분석 심리학을 전공한 교수야. 너에게 내 MBTI 타입과 고민을 말해 줄건데, "
+                                "내 질문이나 고민을 요약하고 내가 어떻게 행동하면 좋은지를 보고서 형태로 작성해줘. 다음과 같은 사항을 고려해서 작성해줘.\n"
+                                "______________중요!!!\n" +
+                                "- 정말 사람에게 제공하는 보고서처럼 작성  (맨 위에 [보고서])\n" +
+                                "- 분석, MBTI 타입과 관련한 설명, 심리학의 유명 인사의 말 인용한 조언으로 3가지 항목을 서술\n"
+                                "- 모든 대답을 엄청나게 짧게 할 것(제일 중요)\n"}
 ]
 
 
 def get_message(mbti, content):
     new_message = messages
-    mbti = "\n- 내 mbti" + mbti
-    content = "\n- 내 질문" + content
+    mbti = "\nmbti: " + mbti
+    content = "\n-질문: " + content
     new_message[1]["content"] += mbti
     new_message[1]["content"] += content
     return new_message
+
 

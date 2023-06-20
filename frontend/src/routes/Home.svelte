@@ -1,16 +1,32 @@
 <script>
-    import { push } from 'svelte-spa-router'
+    import { push } from 'svelte-spa-router';
     import fastapi from "../lib/api";
-    
+
+    let isLoading = false;
+
     function post_question(mbti, content) {
-        let url = "/api/question/create"
+        let url = "/api/question/create_test"
         let params = {
             mbti: mbti,
             content: content,
         }
+
+        isLoading = true;
+        // let _url = import.meta.env.VITE_SERVER_URL+url
+        // axios.post(_url, {
+        //   'mbti': mbti,
+        //   'content': content
+        // })
+        //   .then(function (response){
+        //     localStorage.setItem("answer", response.data); 
+        //     console.log(response)
+        //     push("/answer");
+        //   }) 
+        
         fastapi('post', url, params, 
             (json) => {
-                push("/")
+              localStorage.setItem("answer", JSON.stringify(json)); 
+              push("/answer");
             },
             (json_error) => {
                 error = json_error
@@ -33,6 +49,7 @@
     }
   
     function handleSubmit() {
+      
       const selectedButtons = document.querySelectorAll('.mbti-option.selected');
       const content = document.getElementById('input').value
       
@@ -40,14 +57,20 @@
       selectedButtons.forEach((button) => {
         mbti += button.value;
       });
-
+      console.log(mbti)
+      console.log(content)
       post_question(mbti, content)
     }
   
   </script>
-  
-  <body>
-  
+
+
+{#if isLoading}
+<body>
+  <div> 성격 유형과 질문을 분석중입니다...</div>
+</body>
+{:else}
+<body>
   <div class="container">
     <div class="hero">
       <h1>Tell your worry</h1>
@@ -107,8 +130,12 @@
       <button class="submit-button" on:click={handleSubmit}>보내기</button>
     </div>
   </div>
-  
   </body>
+{/if}
+
+
+
+  
   
   <style>
   
