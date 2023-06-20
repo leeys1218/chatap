@@ -1,9 +1,9 @@
 FROM node:16.17.0
 
-WORKDIR /frontend
+WORKDIR ./frontend
 
 
-COPY . .
+COPY . ./frontend
 
 RUN cd frontend
 RUN npm install
