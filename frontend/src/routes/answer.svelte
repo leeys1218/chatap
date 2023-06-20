@@ -1,6 +1,4 @@
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
     @keyframes appear {
       from {
         opacity: 0;
@@ -11,7 +9,7 @@
     }
 
     body {
-      background-image: url('./images/background.jpg');
+      background-image: url("./public/images/background.jpg");
       background-size: cover;
       height: 100vh;
       color: white;
@@ -39,7 +37,6 @@
     }
 
     pre {
-      font-family: 'Roboto', sans-serif;
       white-space: pre-wrap;
       font-size: 20px;
       color: #333333;
