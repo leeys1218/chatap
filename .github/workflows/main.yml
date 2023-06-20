@@ -45,7 +45,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           builder: ${{ steps.buildx.outputs.name }}
-          file: ./backend/Dockerfile
+          file: ./backend
           push: true
           tags: ghcr.io/${{ github.actor }}/chatap/backend:latest
           
@@ -54,7 +54,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           builder: ${{ steps.buildx.outputs.name }}
-          file: ./frontend/Dockerfile
+          file: ./frontend
           push: true
           tags: ghcr.io/${{ github.actor }}/chatap/frontend:latest
   
