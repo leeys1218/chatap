@@ -41,10 +41,12 @@ jobs:
 
         
       - name: Build backend
+        
         id: docker_build_backend
         uses: docker/build-push-action@v2
         with:
           builder: ${{ steps.buildx.outputs.name }}
+          working-directory: ./backend
           file: ./backend/Dockerfile
           push: true
           tags: ghcr.io/${{ github.actor }}/chatap/backend:latest
@@ -54,6 +56,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           builder: ${{ steps.buildx.outputs.name }}
+          working-directory: ./frontend
           file: ./frontend/Dockerfile
           push: true
           tags: ghcr.io/${{ github.actor }}/chatap/frontend:latest
