@@ -72,8 +72,13 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.CHATAP_TOKEN }}
 
-      - name: Docker run
+      - name: Docker run (backend)
         run: |
-          docker-compose down --rmi all
-          docker-compose up
+          docker stop chatapbackend && docker rm chatapbackend && docker rmi ghcr.io/${{ github.actor }}/chatap/backend:latest
+          docker run -d -p 8080:8080 --name backend --restart always ghcr.io/${{ github.actor }}/chatap/backend:latest
+          
+      - name: Docker run (frontend)
+        run: |
+          docker stop chatapfrontend && docker rm chatapfrontend && docker rmi ghcr.io/${{ github.actor }}/chatap/frontend:latest
+          docker run -d -p 5173:5173 --name frontend --restart always ghcr.io/${{ github.actor }}/chatap/frontend:latest
           
