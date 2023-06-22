@@ -5,8 +5,10 @@ WORKDIR /app
 
 COPY . .
 
+
 RUN pip freeze > requirements.txt
 RUN pip install -r requirements.txt
+RUN pip install uvicorn
 
 ENV API_ENV "prod"
 
