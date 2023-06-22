@@ -46,13 +46,18 @@
   </style>
   
   <script>
-
+  
+  let data = localStorage.getItem("answer");
+  data = JSON.parse(data)
+  data.replace('\n', '<br>')
+  data.replace('\n\n', '<br>')
+  
   </script>
   
   <body>
     <div class="container">
       <h1>Psychologist Answers</h1>
-      
+      <pre>{data}</pre>
     </div>
   </body>
 
