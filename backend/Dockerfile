@@ -1,7 +1,7 @@
 FROM python:3.10
 
 
-WORKDIR /app
+WORKDIR /backend
 
 COPY . .
 
@@ -13,4 +13,4 @@ RUN pip install uvicorn
 ENV API_ENV "prod"
 
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080"]
+CMD ["cd", "backend", "&&", "uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "8080"]
