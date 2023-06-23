@@ -5,9 +5,9 @@ WORKDIR /backend
 
 COPY . .
 
-RUN cd backend && pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 ENV API_ENV "prod"
 
-CMD cd backend && uvicorn app.main:app --host 0.0.0.0 --port 8080
+CMD uvicorn app.main:app --host 0.0.0.0 --port 8080
 
