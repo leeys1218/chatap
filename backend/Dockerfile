@@ -5,7 +5,7 @@ WORKDIR /backend
 
 COPY . .
 
-RUN pip install -r requirements.txt
+RUN cd backend && pip install -r requirements.txt
 RUN pip install uvicorn
 
 ENV API_ENV "prod"
