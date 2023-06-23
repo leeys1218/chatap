@@ -5,8 +5,6 @@ WORKDIR /backend
 
 COPY . .
 
-
-RUN pip freeze > requirements.txt
 RUN pip install -r requirements.txt
 RUN pip install uvicorn
 
