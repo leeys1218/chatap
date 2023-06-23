@@ -12,5 +12,5 @@ RUN pip install uvicorn
 
 ENV API_ENV "prod"
 
-CMD cd backend uvicorn main:app --host 0.0.0.0 --port 8080
+CMD cd backend && uvicorn main:app --host 0.0.0.0 --port 8080
 
