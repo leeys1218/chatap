@@ -9,6 +9,6 @@ RUN cd frontend && ls
 RUN cd frontend && npm install
 RUN cd frontend && npm run build
 
-CMD ["npm", "run", "dev"]
+CMD ["cd", "frontend", "&&", "npm", "run", "dev"]
 
 
