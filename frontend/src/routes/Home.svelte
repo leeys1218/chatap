@@ -12,8 +12,6 @@
         }
 
         isLoading = true;
-        let _url = import.meta.env.VITE_SERVER_URL+url
-
         
         fastapi('post', url, params, 
             (json) => {
