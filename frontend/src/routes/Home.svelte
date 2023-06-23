@@ -5,23 +5,15 @@
     let isLoading = false;
 
     function post_question(mbti, content) {
-        let url = "/api/question/create_test"
+        let url = "/api/question/create"
         let params = {
             mbti: mbti,
             content: content,
         }
 
         isLoading = true;
-        // let _url = import.meta.env.VITE_SERVER_URL+url
-        // axios.post(_url, {
-        //   'mbti': mbti,
-        //   'content': content
-        // })
-        //   .then(function (response){
-        //     localStorage.setItem("answer", response.data); 
-        //     console.log(response)
-        //     push("/answer");
-        //   }) 
+        let _url = import.meta.env.VITE_SERVER_URL+url
+
         
         fastapi('post', url, params, 
             (json) => {
