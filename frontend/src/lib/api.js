@@ -22,7 +22,7 @@ const fastapi = (operation, url, params, success_callback, failure_callback) => 
     }
     console.log(_url)
     console.log(options)
-    fetch(_url, options)
+    await fetch(_url, options)
         .then(response => {
             console.log("hi")
             if(response.status === 204) {  // No content
