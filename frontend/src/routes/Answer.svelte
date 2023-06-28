@@ -9,11 +9,12 @@
     }
 
     body {
-      background-image: url("./public/images/background.jpg");
+      background-image: url("images/background.jpg");
       background-size: cover;
       height: 100vh;
       color: white;
     }
+
     .container {
       animation: appear 2s ease;
       animation-fill-mode: forwards;

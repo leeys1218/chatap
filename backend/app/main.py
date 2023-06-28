@@ -26,8 +26,7 @@ def create_app():
     # middleware def
     origins = [
         "http://127.0.0.1:5173",
-        "0.0.0.0:5173",
-        "13.124.171.138",
+        "http://localhost:5173",
         "0.0.0.0"
     ]
     app.add_middleware(
