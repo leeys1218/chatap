@@ -12,7 +12,6 @@
       background-image: url("images/background.jpg");
       background-size: cover;
       height: 100vh;
-      margin: 0
     }
 
     .container {
@@ -20,7 +19,6 @@
       animation-fill-mode: forwards;
       opacity: 0;
 
-      max-width: 800px;
       margin: 0 auto;
       padding: 40px;
       background-color: lightgray;

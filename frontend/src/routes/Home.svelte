@@ -5,7 +5,7 @@
     let isLoading = false;
 
     function post_question(mbti, content) {
-        let url = "/api/question/create"
+        let url = "/api/question/create_test"
         let params = {
             mbti: mbti,
             content: content,
