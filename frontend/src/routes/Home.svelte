@@ -58,7 +58,7 @@
 {#if isLoading}
 <body>
   <div id="loadingMessage" class="loading">
-    성격 유형과 질문을 분석중입니다...
+    답변을 생성 중입니다....
     <br>
     (평균 1분 소요)
   </div>
@@ -152,9 +152,10 @@
   
   body {
     background-image: url('./images/background.jpg');
-    background-size: 100%;
+    background-size: cover;
     height: 100vh;
     color: white;
+    margin: 0;
   }
   
   .hero, .mbti-container, .input-container {
