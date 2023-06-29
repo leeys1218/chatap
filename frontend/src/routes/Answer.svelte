@@ -10,8 +10,8 @@
 
     body {
       background-image: url("images/background.jpg");
-      background-size: cover;
-      height: 100vh;
+      background-size: 100%;
+      height: 100%;
       color: white;
     }
 
