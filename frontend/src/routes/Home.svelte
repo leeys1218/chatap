@@ -57,7 +57,12 @@
 
 {#if isLoading}
 <body>
-  <div> 성격 유형과 질문을 분석중입니다...</div>
+  <div id="loadingMessage" class="loading">
+    성격 유형과 질문을 분석중입니다...
+    <br>
+    (평균 1분 소요)
+  </div>
+  
 </body>
 {:else}
 <body>
@@ -147,7 +152,7 @@
   
   body {
     background-image: url('./images/background.jpg');
-    background-size: cover;
+    background-size: 100%;
     height: 100vh;
     color: white;
   }
@@ -182,6 +187,23 @@
     align-items: center;
     opacity: 0.9;
   }
+
+  .loading {
+      animation: fadeEffect 3s infinite;
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      padding-top: 300px;
+    }
+
+    @keyframes fadeEffect {
+      0%, 100% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
   
   label {
     font-size: 16px;
