@@ -10,9 +10,9 @@
 
     body {
       background-image: url("images/background.jpg");
-      background-size: 100%;
-      height: 100%;
-      color: white;
+      background-size: cover;
+      height: 100vh;
+      margin: 0
     }
 
     .container {
