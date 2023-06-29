@@ -11,7 +11,7 @@
     body {
       background-image: url("images/background.jpg");
       background-size: cover;
-      height: 100vh;
+      height: 100%;
     }
 
     .container {
