@@ -13,7 +13,7 @@
     body {
       background-image: url("images/background.jpg");
       background-size: cover;
-      height: 100vh;
+      height: 100%;
     }
 
     .container {
@@ -22,7 +22,7 @@
       opacity: 0;
 
       
-      padding: 100px;
+      padding: 0px;
       background-color: lightgray;
       background-color: rgba( 255, 255, 255, 0.5 );
 
