@@ -8,12 +8,10 @@
       }
     }
 
-    
-
     body {
       background-image: url("images/background.jpg");
       background-size: cover;
-      height: 100%;
+      height: 100vh;
     }
 
     .container {
@@ -21,8 +19,8 @@
       animation-fill-mode: forwards;
       opacity: 0;
 
-      
-      padding: 0px;
+      margin: 0 auto;
+      padding: 40px;
       background-color: lightgray;
       background-color: rgba( 255, 255, 255, 0.5 );
 
@@ -42,7 +40,15 @@
       font-size: 20px;
       color: #333333;
     }
-  
+    
+    @media only screen and (max-width: 768px) {
+    body {
+      height: 768px;
+      background-image: url("images/background.jpg");
+      background-size: cover;
+      height: 100%;
+    }
+  }
 
   </style>
   
