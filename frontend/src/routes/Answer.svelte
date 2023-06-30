@@ -8,8 +8,6 @@
       }
     }
 
-    
-
     body {
       background-image: url("images/background.jpg");
       background-size: cover;
@@ -21,8 +19,8 @@
       animation-fill-mode: forwards;
       opacity: 0;
 
-      
-      padding: 0px;
+      margin: 0 auto;
+      padding: 40px;
       background-color: lightgray;
       background-color: rgba( 255, 255, 255, 0.5 );
 
