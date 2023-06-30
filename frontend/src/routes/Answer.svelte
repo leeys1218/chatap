@@ -8,10 +8,12 @@
       }
     }
 
+    
+
     body {
       background-image: url("images/background.jpg");
       background-size: cover;
-      height: 100%;
+      height: 100vh;
     }
 
     .container {
@@ -19,8 +21,8 @@
       animation-fill-mode: forwards;
       opacity: 0;
 
-      margin: 0 auto;
-      padding: 40px;
+      
+      padding: 100px;
       background-color: lightgray;
       background-color: rgba( 255, 255, 255, 0.5 );
 
