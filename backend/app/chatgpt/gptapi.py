@@ -9,7 +9,7 @@ def get_answer(_question: question_schema.QuestionCreate):
     openai.api_key = prompt.OPENAI_API_KEY
     response = openai.ChatCompletion.create(
         model=prompt.model,
-        messages=prompt.get_message(_question.mbti, _question.content)
+        messages=prompt.get_message(_question.mbti, _question.content),
     )
 
     answer = response['choices'][0]['message']['content']
