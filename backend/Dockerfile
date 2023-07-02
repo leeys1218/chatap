@@ -5,8 +5,8 @@ WORKDIR /backend
 
 COPY . .
 
+RUN cd backend && pip install --upgrade pip
 RUN cd backend && pip install -r requirements.txt
-RUN cd backend && pip uninstall uvicorn
 RUN cd backend && pip install 'uvicorn[standard]'
 
 
