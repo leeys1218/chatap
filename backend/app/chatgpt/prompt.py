@@ -1,6 +1,6 @@
 model = "gpt-3.5-turbo"
 
-OPENAI_API_KEY = "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"
+
 
 def get_message(mbti, content):
     new_message = [
