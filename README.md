@@ -26,9 +26,9 @@ MBTI를 클릭한 후 질문을 작성하여 보내기 버튼을 누른다.
 - Python 3.10.9 (window)
 
 ### Framework
-- frontend: svelt(nodeJS)
-- backend: fastAPI(python)
-- cloud: AWS EC2, AWS RDS
+- Frontend: Svelt (nodeJS)
+- Backend: FastAPI (python)
+- Cloud: AWS EC2, AWS RDS
 - CICD: Github action, docker-compose
 
 
