@@ -11,13 +11,25 @@ MBTI와 고민을 입력 받고 분석 심리학 기반의 답변을 제공하�
 <br>
 <br>
 
-### Service senario
+### Build Local
+#### Docker
+##### Front End
+```
+** /frontend
 
-#### Front End
-MBTI를 클릭한 후 질문을 작성하여 보내기 버튼을 누른다.
-#### Back End
+docker . -t frontend
+```
+##### Back End
+```
+** /backend/app/chatgpt/promp.py에 다음을 추가 & config.py 클라우드 관련 설정
 
-사용자가 보낸 MBTI와 질문을 조합하여 ChatGPT에 적절한 prompt를 전송하고 받은 결과를 유저에게 전송한다.
+OPENAI_API_KEY=xxxxxxxx
+```
+```
+** /backend
+
+docker . -t backend
+```
 
 <br>
 
